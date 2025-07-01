@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彩票選號器</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 自定義樣式 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-4xl font-extrabold mb-4">彩票選號器</h1>
+        <p class="text-lg mb-6">點擊按鈕生成您的幸運號碼！</p>
+
+        <div class="select-container">
+            <label for="lotteryType" class="block text-gray-700 text-left text-sm font-bold mb-2">選擇彩票類型:</label>
+            <select id="lotteryType" class="lottery-select">
+                <option value="dlt">大樂透 (Mega 6/49)</option>
+                <option value="wlc">威力彩 (Super Lotto)</option>
+                <option value="jc539">今彩539 (Daily Cash 5/39)</option>
+                <option value="swc">雙贏彩 (Win-Win Lotto)</option>
+                <option value="sxc">3星彩 (3-Star Lotto)</option>
+                <option value="ssxc">4星彩 (4-Star Lotto)</option>
+                <option value="bingo">BINGO BINGO</option>
+            </select>
+        </div>
+
+        <div class="number-display" id="numberDisplay">
+            <!-- 號碼球將在這裡顯示 -->
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+            <button id="generateBtn" class="button generate-button">生成號碼</button>
+            <button id="resetBtn" class="button reset-button">重置</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
